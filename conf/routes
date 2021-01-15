@@ -5,7 +5,10 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.BookController.index
-GET     /delete/:id                 controllers.BookController.delete(id: Int)
+GET     /book/:id                     controllers.BookController.findById(id:Int)
+DELETE     /delete/:id                 controllers.BookController.delete(id: Int)
+PUT     /update/:id                 controllers.BookController.update(id: Int)
+POST     /create                 controllers.BookController.create
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
