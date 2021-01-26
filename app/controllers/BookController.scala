@@ -37,7 +37,7 @@ class BookController @Inject()(messages: MessagesApi)(ec: ExecutionContext)(cc: 
      }
   }
   def create = Action { req =>
-     println(req.body.asJson.get.validate[Book])
+//     println(req.body.asJson.get.validate[Book])
       Book.createBook(req.body.asJson.get.validate[Book].get)
       Ok("create success")
   }
